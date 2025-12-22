@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nurfatiehah Aziean – Student Bento Grid</title>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -16,6 +15,7 @@
       --text-primary: #1f2933;
       --text-secondary: #6b7280;
       --accent: #0077b6;
+      --btn-hover: #005f92;
     }
 
     * {
@@ -73,8 +73,6 @@
     .profile {
       grid-column: span 2;
       grid-row: span 2;
-
-      /* BACKGROUND IMAGE DITAMBAH */
       background-image: url("bg.jpg");
       background-size: cover;
       background-position: center;
@@ -92,6 +90,15 @@
 
     .case-study {
       grid-column: span 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .case-study-content {
+      flex: 1;
     }
 
     .hobby {
@@ -100,6 +107,27 @@
 
     .playlist {
       grid-column: span 4;
+    }
+
+    /* Button Styling */
+    .app-button {
+      background-color: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 119, 182, 0.2);
+    }
+
+    .app-button:hover {
+      background-color: var(--btn-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 119, 182, 0.3);
     }
 
     /* Profile styling */
@@ -160,6 +188,15 @@
       .playlist {
         grid-column: span 1;
       }
+
+      .case-study {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .app-button {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -195,9 +232,12 @@
     </div>
 
     <div class="card case-study">
-      <h2>Case Study</h2>
-      <p><strong>Starch Gelatinization in Local Kuih</strong></p>
-      <p>Analyzing texture profiles of Kuih Lapis.</p>
+      <div class="case-study-content">
+        <h2>Case Study</h2>
+        <p><strong>Starch Gelatinization in Local Kuih</strong></p>
+        <p>Analyzing texture profiles of Kuih Lapis.</p>
+      </div>
+      <a href="[PASTE YOUR APP URL HERE]" class="app-button" target="_blank">Try My Focus Timer App</a>
     </div>
 
     <div class="card hobby">
